@@ -13,6 +13,9 @@ RUN npm install --legacy-peer-deps
 # Set the NODE_OPTIONS environment variable to use the legacy OpenSSL provider
 ENV NODE_OPTIONS=--openssl-legacy-provider
 
+# Set the port environment variable
+ENV PORT=4000
+
 # Copy the entire project directory into the container
 COPY . .
 
