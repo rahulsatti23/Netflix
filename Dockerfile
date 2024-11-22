@@ -10,6 +10,9 @@ COPY package.json package-lock.json ./
 # Install all dependencies
 RUN npm install --legacy-peer-deps
 
+# Set the NODE_OPTIONS environment variable to use the legacy OpenSSL provider
+ENV NODE_OPTIONS=--openssl-legacy-provider
+
 # Copy the entire project directory into the container
 COPY . .
 
